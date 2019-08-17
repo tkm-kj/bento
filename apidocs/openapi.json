@@ -1,0 +1,67 @@
+{
+  "openapi" : "3.0.1",
+  "info" : {
+    "title" : "Petstore API",
+    "description" : "これはペットストアに関するAPIです。",
+    "termsOfService" : "http://swagger.io/terms/",
+    "contact" : {
+      "email" : "apiteam@swagger.io"
+    },
+    "license" : {
+      "name" : "Apache 2.0",
+      "url" : "http://www.apache.org/licenses/LICENSE-2.0.html"
+    },
+    "version" : "1.0.0"
+  },
+  "servers" : [ {
+    "url" : "/"
+  } ],
+  "paths" : {
+    "/api/pets/{petId}" : {
+      "get" : {
+        "tags" : [ "pet" ],
+        "summary" : "ペット情報API",
+        "description" : "指定されたpetIdの情報を返します",
+        "operationId" : "get_pet_by_id",
+        "parameters" : [ {
+          "name" : "petId",
+          "in" : "path",
+          "description" : "取得したいペットのID",
+          "required" : true,
+          "schema" : {
+            "type" : "integer"
+          }
+        } ],
+        "responses" : {
+          "200" : {
+            "description" : "成功時のレスポンス",
+            "content" : {
+              "application/json" : {
+                "schema" : {
+                  "$ref" : "#/components/schemas/Pet"
+                }
+              }
+            }
+          }
+        }
+      }
+    }
+  },
+  "components" : {
+    "schemas" : {
+      "Pet" : {
+        "required" : [ "id", "name" ],
+        "type" : "object",
+        "properties" : {
+          "id" : {
+            "type" : "integer"
+          },
+          "name" : {
+            "type" : "string",
+            "example" : "doggie"
+          }
+        }
+      }
+    }
+  }
+}

@@ -24,6 +24,8 @@ gem 'turbolinks'
 
 group :development, :test do
   gem 'bullet'
+  gem 'committee'
+  gem 'committee-rails'
   gem 'dotenv-rails'
   gem 'pry-byebug'
   gem 'pry-rails'
