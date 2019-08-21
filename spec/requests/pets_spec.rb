@@ -16,7 +16,7 @@ RSpec.describe "Api::Pets", type: :request do
   describe "GET /api/pets" do
     it 'レスポンスがAPIドキュメントと一致する' do
       get '/api/pets/1'
-      assert_schema_conform
+      assert_response_schema_confirm
     end
   end
 end
