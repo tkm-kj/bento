@@ -11,7 +11,7 @@ RUN bash -c "mkdir -p /usr/share/man/man{1..8}" \
     make gcc g++ libxml2-dev patch postgresql-client libpq-dev curl gnupg2 \
     && rm -rf /var/lib/apt/lists/* \
     && bash -c "rm -rf /usr/share/man/man{1..8}/*"
-RUN gem install bundler
+RUN gem install bundler sinatra sinatra-cross_origin
 
 COPY . /bento
 WORKDIR /bento

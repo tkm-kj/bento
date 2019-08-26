@@ -8,10 +8,10 @@
     "version" : "1.0.0"
   },
   "servers" : [ {
-    "url" : "http://petstore.swagger.io/v1"
+    "url" : "/"
   } ],
   "paths" : {
-    "api/pets" : {
+    "/api/pets" : {
       "get" : {
         "tags" : [ "pets" ],
         "summary" : "List all pets",
@@ -136,6 +136,10 @@
           "name" : {
             "type" : "string"
           }
+        },
+        "example" : {
+          "name" : "name",
+          "id" : 0
         }
       },
       "Pets" : {
