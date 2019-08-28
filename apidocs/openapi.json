@@ -1,5 +1,5 @@
 {
-  "openapi" : "3.0.2",
+  "openapi" : "3.0.1",
   "info" : {
     "title" : "Swagger Petstore",
     "license" : {
@@ -136,10 +136,6 @@
           "name" : {
             "type" : "string"
           }
-        },
-        "example" : {
-          "name" : "name",
-          "id" : 0
         }
       },
       "Pets" : {
