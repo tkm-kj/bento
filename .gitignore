@@ -66,3 +66,4 @@ bower.json
 config/database.yml
 
 spec/examples.txt
+stub_server
